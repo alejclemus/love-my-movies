@@ -3,5 +3,6 @@
         "activityBar.background": "#392645",
         "titleBar.activeBackground": "#503560",
         "titleBar.activeForeground": "#FDFCFD"
-    }
+    },
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
 }
