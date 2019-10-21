@@ -11,18 +11,18 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ url_for('templates', filename='plugins/bootstrap/bootstrap.min.cs') }}">s
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.cs') }}">s
   <!-- slick slider -->
-  <link rel="stylesheet" href="{{ url_for('templates', filename='plugins/slick/slick.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/slick/slick.css') }}">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="{{ url_for('templates', filename='plugins/themify-icons/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/themify-icons/themify-icons.css') }}">
 
   <!-- Main Stylesheet -->
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="{{ url_for('templates', filename='images/408x161-powered-by-rectangle-blue-10d3d41d2a0af9ebcb85f7fb62ffb6671c15ae8ea9bc82a2c6941f223143409e.png') }}" type="image/x-icon">
-  <link rel="icon" href="{{ url_for('templates', filename='images/408x161-powered-by-rectangle-blue-10d3d41d2a0af9ebcb85f7fb62ffb6671c15ae8ea9bc82a2c6941f223143409e.png') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/408x161-powered-by-rectangle-blue-10d3d41d2a0af9ebcb85f7fb62ffb6671c15ae8ea9bc82a2c6941f223143409e.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='images/408x161-powered-by-rectangle-blue-10d3d41d2a0af9ebcb85f7fb62ffb6671c15ae8ea9bc82a2c6941f223143409e.png') }}" type="image/x-icon">
 
 </head>
 
@@ -42,7 +42,7 @@
 
 <header class="navigation">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="index.html"><img class="img-fluid" src="{{ url_for('templates', filename='images/logo.png') }}" alt="parsa"></a>
+    <a class="navbar-brand" href="index.html"><img class="img-fluid" src="{{ url_for('static', filename='images/logo.png') }}" alt="parsa"></a>
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
       aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@
     <div class="row featured-post-slider">
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('templates', filename='images/featured-post/post-1.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-1.jpg') }}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
               <p class="text-uppercase">LifeStyle</p>
@@ -83,7 +83,7 @@
       </div>
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('templates', filename='images/featured-post/post-2.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-2.jpg') }}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
               <p class="text-uppercase">LifeStyle</p>
