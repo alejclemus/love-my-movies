@@ -7,6 +7,6 @@ install:
 # command to run tests
 script:
 # unit test
-- python -m pytest -v
+- python -m unittest -v
 # linting test
 - flake
