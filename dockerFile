@@ -1,0 +1,13 @@
+
+FROM python:3.6-alpine
+
+ENV DEVELOPER="Alejandra Lemus"
+ADD . /app
+COPY app.py /app
+COPY Templates /app/templates
+WORKDIR /app
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
