@@ -1,12 +1,9 @@
 from flask import Flask, render_template
 from flask_caching import Cache
-import os, json
+import os, json, requests
 
-import requests, json 
-
-response = requests.get('https://api.themoviedb.org/3/trending/movie/week?api_key=c2fd774870d4a09046deebc36f861d7d')
+response = requests.get('https://api.themoviedb.org/3/trending/movie/week?api_key=4d2360655220d65f91d1ebbde776d1c1')
 data1 = response.json()
-
 with open('trendingMoviesAPI.json', 'w', encoding='utf-8') as f:
     json.dump(data1, f, ensure_ascii=False, indent=4)
 
