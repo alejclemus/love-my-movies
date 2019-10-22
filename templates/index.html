@@ -43,24 +43,6 @@
 <header class="navigation">
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="index.html"><img class="img-fluid" src="{{ url_for('static', filename='images/logo.png') }}" alt="parsa"></a>
-    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
-      aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse text-center" id="navogation">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="navbarDropdown"
-            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Home
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="index.html">Homepage 1</a>
-          </div>
-        </li>
-      </ul>
-    </div>
   </nav>
 </header>
 
@@ -73,8 +55,8 @@
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.0.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase"> {{data.results.0.title}}</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.0.overview}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.0.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.0.overview}}</a></p>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -85,8 +67,8 @@
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.1.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">{{data.results.1.title}}</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.1.overview}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.1.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.1.overview}}</a></p>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -97,8 +79,8 @@
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.2.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">{{data.results.2.title}}</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.2.overview}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.2.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.2.overview}}</a></p>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -109,8 +91,8 @@
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.3.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">{{data.results.3.title}}</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.3.overview}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.3.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.3.overview}}</a></p>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -121,8 +103,20 @@
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.4.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">{{data.results.4.title}}</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.4.overview}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.4.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.4.overview}}</a></p>
+              <a class="btn btn-outline-light" href="blog-single.html">read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+        <article class="card bg-dark text-center text-white border-0 rounded-0">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.5.poster_path}}" alt="post-thumb">
+          <div class="card-img-overlay">
+            <div class="card-content">
+              <h4 class="card-title mb-4"><a class="text-white">{{data.results.5.title}}</a></h4>
+              <p><a class="text-white" href="##">{{data.results.5.overview}}</a></p>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
