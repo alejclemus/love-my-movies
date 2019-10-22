@@ -7,4 +7,4 @@ install:
 # command to run tests
 script:
 # unit test
-- python -m unittest -v
+- python tests_class.py
