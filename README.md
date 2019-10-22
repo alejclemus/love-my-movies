@@ -103,13 +103,13 @@ Which gave me [trending_movies.json](trending_movies.json)
 
 # Not Extras, but required (MUST)
 
-- [ ] Use Flask as backend (for now)
+- [x] Use Flask as backend (for now)
 - [ ] Use Redis as the counter DB (incr/decr vote_count)
 - [ ] Use Redis to store any details or additional info for the movies (JSON respond)
-- [ ] Use Redis as a cache.
-- [ ] CI/CD (you can use GithubActions (beta) / Gitlab CI /Travis/ Circle CI)
+- [x] Use Redis as a cache.
+- [x] CI/CD (you can use GithubActions (beta) / Gitlab CI /Travis/ Circle CI)
 - [ ] Dockerfile with a valid docker build & push to a valid Docker Hub repository.
-- [ ] A good html/css layout of your own.
+- [x] A good html/css layout.
 - [ ] Modularize everything with files and functions.
 - [ ] Use javascript to "Click and show more details of the movie"
 - [ ] IT WILL NOT RUN under python, but Docker, you must provide under the [README's Usage](#usage) how to run it using Docker commands
