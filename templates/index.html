@@ -11,7 +11,7 @@
 
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.cs') }}">s
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.css') }}">
   <!-- slick slider -->
   <link rel="stylesheet" href="{{ url_for('static', filename='plugins/slick/slick.css') }}">
   <!-- themefy-icon -->
@@ -70,12 +70,11 @@
     <div class="row featured-post-slider">
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-1.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.0.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <p class="text-uppercase"> {{data.results.0.title}}</p>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.0.overview}}</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -83,12 +82,11 @@
       </div>
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-2.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.1.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <p class="text-uppercase">{{data.results.1.title}}</p>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.1.overview}}</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -96,12 +94,11 @@
       </div>
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-3.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.2.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <p class="text-uppercase">{{data.results.2.title}}</p>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.2.overview}}</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -109,12 +106,11 @@
       </div>
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-4.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.3.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <p class="text-uppercase">{{data.results.3.title}}</p>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.3.overview}}</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -122,12 +118,11 @@
       </div>
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{ url_for('static', filename='images/featured-post/post-5.jpg') }}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.4.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <p class="text-uppercase">LifeStyle</p>
-              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">Organize Your Life With 10
-                  Simple rule</a></h4>
+              <p class="text-uppercase">{{data.results.4.title}}</p>
+              <h4 class="card-title mb-4"><a class="text-white" href="blog-single.html">{{data.results.4.overview}}</a></h4>
               <a class="btn btn-outline-light" href="blog-single.html">read more</a>
             </div>
           </div>
@@ -146,7 +141,7 @@
 </footer>
 
 <!-- jQuery -->
-<script src="{{ url_for('static', filename='/jQuery/jquery.min.js') }}"plugins></script>
+<script src="{{ url_for('static', filename='plugins/jQuery/jquery.min.js') }}"plugins></script>
 <!-- Bootstrap JS -->
 <script src="{{ url_for('static', filename='plugins/bootstrap/bootstrap.min.js') }}"></script>
 <!-- slick slider -->
