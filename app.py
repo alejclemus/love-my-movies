@@ -1,12 +1,14 @@
 from flask import Flask, render_template
 from flask_caching import Cache
-from tmdbv3api import TMDb
 import os, json
 
-tmdb = TMDb()
-tmdb.api_key = 'YOUR_API_KEY'
-tmdb.language = 'en'
-tmdb.debug = True
+import requests, json 
+
+response = requests.get('https://api.themoviedb.org/3/trending/movie/week?api_key=c2fd774870d4a09046deebc36f861d7d')
+data1 = response.json()
+
+with open('trendingMoviesAPI.json', 'w', encoding='utf-8') as f:
+    json.dump(data1, f, ensure_ascii=False, indent=4)
 
 app = Flask(__name__)
 app.static_folder = 'templates'
@@ -15,15 +17,11 @@ environment=os.getenv("ENVIRONMENT","development")
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 cache.init_app(app)
 
-filename = os.path.join(app.static_folder, 'jsons', 'trending_movies.json')
-with open(filename) as test_file:
-    data = json.load(test_file)
-
 
 @app.route('/')
 @cache.cached(timeout=50)
 def index():
-    return  render_template('index.html', data=data)
+    return  render_template('index.html', data=data1)
 
 if __name__ == '__main__':
     debug=False

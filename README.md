@@ -110,7 +110,7 @@ Which gave me [trending_movies.json](trending_movies.json)
 - [x] A good html/css layout.
 - [ ] Modularize everything with files and functions.
 - [ ] Use javascript to "Click and show more details of the movie"
-- [ ] IT WILL NOT RUN under python, but Docker, you must provide under the [README's Usage](#usage) how to run it using Docker commands
+- [x] IT WILL NOT RUN under python, but Docker, you must provide under the [README's Usage](#usage) how to run it using Docker commands
 
 
 
