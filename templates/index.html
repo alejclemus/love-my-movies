@@ -54,16 +54,16 @@
       {% for key in redis_server.keys() %}
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.0.poster_path}}" alt="post-thumb">
+          <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{redis_server.hget(key,'poster_path').decode('utf-8')}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
               <h4 class="card-title mb-4"><a class="text-white">{{redis_server.hget(key,"title").decode('utf-8')}}</a></h4>
-              <p><a class="bg-dark text-white" href="##">{{data.results.0.overview}}</a></p>
+              <p><a class="bg-dark text-white" href="##">{{redis_server.hget(key,"overview").decode('utf-8')[0:100]}}</a></p>
               <div>
                 <button type="button" class="btn btn-success">Up</button>
                 <button type="button" class="btn btn-info">Down</button>
                 <td>
-                    <h6 class="bg-light text-dark">{{data.results.0.vote_count}}</h6>
+                    <h6 class="bg-light text-dark">{{redis_server.hget(key,"vote_count").decode('utf-8')}}</h6>
                 </td>
               </div>
             </div>
