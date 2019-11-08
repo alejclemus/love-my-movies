@@ -1,0 +1,12 @@
+version: "2"
+services:
+    web:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/love-my-movies
+        depends_on:
+            - docker_redis
+    docker_redis:
+        image: redis
