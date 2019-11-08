@@ -51,10 +51,10 @@ The app will look like this:
 
 ```bash
 # IT MUST RUN VIA DOCKER
+docker-compose up
 
-docker build --rm -f "dockerFile" -t name:latest .
-
-docker run -it -p 5000:5000 name:latest
+###docker build --rm -f "dockerFile" -t name:latest .
+###docker run -it -p 5000:5000 name:latest
 ```
 
 # The Movie Database API
