@@ -51,6 +51,7 @@ The app will look like this:
 
 ```bash
 # IT MUST RUN VIA DOCKER
+docker-compose build
 docker-compose up
 
 ###docker build --rm -f "dockerFile" -t name:latest .
