@@ -1,4 +1,6 @@
 flask
 redis
+flask_caching
+tmdbv3api
 django
 pytest
