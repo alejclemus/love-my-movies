@@ -1,4 +1,4 @@
-pytest
 flask
-django
 redis
+django
+pytest
