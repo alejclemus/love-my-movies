@@ -50,13 +50,14 @@
 <section>
   <div class="container-fluid p-sm-0">
     <div class="row featured-post-slider">
-      
+
+      {% for key in redis_server.keys() %}
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.0.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
             <div class="card-content">
-              <h4 class="card-title mb-4"><a class="text-white">{{data.results.0.title}}</a></h4>
+              <h4 class="card-title mb-4"><a class="text-white">{{redis_server.hget(key,"title").decode('utf-8')}}</a></h4>
               <p><a class="bg-dark text-white" href="##">{{data.results.0.overview}}</a></p>
               <div>
                 <button type="button" class="btn btn-success">Up</button>
@@ -69,8 +70,9 @@
           </div>
         </article>
       </div>
-
-      <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
+      {% endfor %}
+      
+<!--   <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.1.poster_path}}" alt="post-thumb">
           <div class="card-img-overlay">
@@ -88,6 +90,7 @@
           </div>
         </article>
       </div>
+
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.2.poster_path}}" alt="post-thumb">
@@ -106,6 +109,7 @@
           </div>
         </article>
       </div>
+
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.3.poster_path}}" alt="post-thumb">
@@ -124,6 +128,7 @@
           </div>
         </article>
       </div>
+
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.4.poster_path}}" alt="post-thumb">
@@ -142,6 +147,7 @@
           </div>
         </article>
       </div>
+
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="http://image.tmdb.org/t/p/original/{{data.results.5.poster_path}}" alt="post-thumb">
@@ -159,6 +165,7 @@
             </div>
             </div>
           </div>
+   -->        
         </article>
       </div>
     </div>

@@ -1,16 +1,16 @@
 from flask import Flask, render_template
 from flask_caching import Cache
-from redis import Redis
 from tmdbv3api import TMDb, Movie
-import os, json, requests
+import os, json, requests, redis
 
 response = requests.get('https://api.themoviedb.org/3/trending/movie/week?api_key=4d2360655220d65f91d1ebbde776d1c1')
 data1 = response.json()
 with open('trendingMoviesAPI.json', 'w', encoding='utf-8') as f:
     json.dump(data1, f, ensure_ascii=False, indent=4)
-      
-class db:
-    key = ""
+
+##https://pypi.org/project/tmdbv3api/    
+class database:
+    key = "4d2360655220d65f91d1ebbde776d1c1"
     redis_server = None
     enviroment = ""
     
@@ -48,13 +48,15 @@ class db:
 
 
 app = Flask(__name__)
+tmdb = TMDb()
 key = "4d2360655220d65f91d1ebbde776d1c1"
+tmdb.api_key = '4d2360655220d65f91d1ebbde776d1c1'
 app.static_folder = 'templates'
 environment=os.getenv("ENVIRONMENT","development")
 
-db = db(key, environment)
-db.start()
-redis_server=db.redis_server
+database = database(key, environment)
+database.beginRedis()
+redis_server=database.redis_server
 
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 cache.init_app(app)
